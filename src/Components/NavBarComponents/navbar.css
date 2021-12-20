@@ -1,0 +1,20 @@
+.cardwidget {
+    margin-right: 20px ;
+  }
+.appbar {
+   background-color: rebeccapurple ;
+   align-content: center ;
+}
+
+
+.menu {
+display: inline-block ;
+flex-grow: 3 ;
+
+}
+.bar {
+  text-decoration: none ;
+  list-style: none ;
+  color: white ;
+
+}
