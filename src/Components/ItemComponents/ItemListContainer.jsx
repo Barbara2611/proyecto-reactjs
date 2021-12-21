@@ -2,13 +2,15 @@ import { useState, useEffect } from 'react'
 import { useParams } from "react-router-dom";
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
-import { getFirestore, collection, getDocs, query, where } from "firebase/firestore";
+import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore'
 
 import ItemsList from './ItemsList'
 
 
 const ItemListContainer = () => {
+
   const { id } = useParams();
+
   const [products, SetProducts] = useState([]);
 
   useEffect(() => {
@@ -27,7 +29,7 @@ const ItemListContainer = () => {
     }
   }, [id])
 
-
+console.log(products)
   if (products.length > 0) {
     return (
 
@@ -37,7 +39,7 @@ const ItemListContainer = () => {
   {
     return (
       <Box sx={{ justifyContent: "center", display: "flex" }}>
-        <CircularProgress />
+        <CircularProgress sx={{mt: 20}}/>
       </Box>
     );
   }

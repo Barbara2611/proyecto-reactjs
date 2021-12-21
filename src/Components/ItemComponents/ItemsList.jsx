@@ -1,16 +1,22 @@
+import Box from '@mui/material/Box';
 import Items from './Items'
 
-const ItemsList = ({products, setProductid}) =>{
+
+const ItemsList = ({products}) =>{
     
     return(
-        <div>
-       
-          
-            <Items products={products}
-            setProductid={setProductid}
-            />
-           
-        </div>
+        <Box >
+        {products.map(product => {
+           return (
+              <Items 
+                
+                 product={product}
+               
+              />
+
+           )
+        })}
+     </Box>
     )
 }
 export default ItemsList

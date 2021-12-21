@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import { useEffect, useState } from 'react';
 import ItemCount from '../ItemComponents/ItemCount';
 import { UseCart } from '../CartContexs/CartContex';
+import { positions } from '@mui/system';
 
 const divStyle = {
     display: "inline-block",
@@ -38,6 +39,8 @@ const ItemDetail = ({item}) => {
                     justifyContent: 'center',
                     textAlign: 'center',
                     alignItems: 'center',
+                    mt: 5,
+                    positions:'relative'
                      } }>
         <CardMedia
             component="img"
@@ -47,13 +50,13 @@ const ItemDetail = ({item}) => {
             
         />
         <CardContent>
-            <Typography gutterBottom variant="h5" component="div" sx={{ ml: 10,}}>
+            <Typography gutterBottom variant="h5" component="div" sx={{ ml: 1, mt: 0, positions: 'absolute'}}>
             {item.title}
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-                {item.price}
+            <Typography variant="body2" color="text.secondary" sx={{fontSize: 18}}>
+                ${}{item.price}
             </Typography> 
-            <Typography>
+            <Typography sx={{fontSize: 15}}>
             {item.description}    
             </Typography>               
         </CardContent>

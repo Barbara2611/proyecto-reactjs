@@ -7,6 +7,8 @@ import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { UseCart } from '../CartContexs/CartContex';
 
+const styleButton = { color: '#EC7063', borderColor: '#EC7063'}
+                    
 
 const ItemCount = ({item, setQuantity, initial}) => {
 
@@ -36,6 +38,7 @@ const ItemCount = ({item, setQuantity, initial}) => {
      
        const onAdd = () =>{
          setQuantity(cardItems);
+         console.log(cardItems)
          
        }
        useEffect(() => {
@@ -59,21 +62,23 @@ const ItemCount = ({item, setQuantity, initial}) => {
                     },
                 }}
             >
-                <ButtonGroup variant="outlined" aria-label="outlined button group" >
-                    <Button onClick= {quitItem}>-1</Button>
-                    <Button > {cardItems} </Button>
-                    <Button onClick= {addItem}>+1</Button>
+                <ButtonGroup variant="outlined" aria-label="outlined button group"  >
+                    <Button onClick= {quitItem} style={styleButton}>-1</Button>
+                    <Button  style={styleButton}> {cardItems} </Button>
+                    <Button onClick= {addItem}  style={styleButton}>+1</Button>
                 </ButtonGroup>
             </Box>
-                <Button size="medium" variant="contained" fullWidth="true" disabled={enableBuy}  onClick={onAdd}> Agrega al carrito</Button>
+                <Button size="medium" variant="outlined" fullWidth="true" disabled={enableBuy}  onClick={onAdd}
+                sx={{color: '#EC7063', borderColor: '#EC7063'}}> Agrega al carrito</Button>
                 <Button size="large" variant="contained" fullWidth="false" 
-                sx={{ marginTop: 20,
-                      marginRight: 19,
+                sx={{ marginTop: 30,
+                      marginRight: 30,
                       position: 'absolute',
-                      width: 300
+                      width: 300,
+                      backgroundColor: '#EC7063'
                      }}>
                     <Link to="/Cart" 
-                    sx={{ textDecoration: 'none', color: "white" }}> Finalizar mi compra </Link>  </Button>
+                    style={{ textDecoration: 'none', color: "white"}}> Finalizar mi compra </Link>  </Button>
             </CardActions>
             
       

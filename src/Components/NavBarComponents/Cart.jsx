@@ -96,7 +96,7 @@ export default function Cart() {
   if (cart.length > 0) {
     return (
       <>
-        <Box sx={{ display: "flex", justifyContent: "center" }}>
+        <Box sx={{ display: "flex", justifyContent: "center", mt: 10, mr: 15}}>
           <Box sx={{ display: "flex", justifyContent: "center", marginRight: 10, flexDirection: "column", boxShadow: 1 }}>
             <List dense sx={{ maxWidth: 600, bgcolor: 'background.paper', boxShadow: 1 }}>
               {cart.map((value) => {
@@ -183,10 +183,10 @@ export default function Cart() {
     return (
       <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
 
-        <Typography color="text.secondary" sx={{ fontSize: 22, textAlign: "center" }}
+        <Typography color="text.secondary" sx={{ fontSize: 22, textAlign: "center", mt: 8 }}
 
         > ¡Tu carrito esta vacío!</Typography>
-        <Button sx={{ maxWidth: 500, fontSize: 15, marginRight: "auto", marginLeft: "auto" }} variant="contained"
+        <Button sx={{ maxWidth: 500, fontSize: 15, marginRight: "auto", marginLeft: "auto", mt: 10, backgroundColor: "#EC7063" }} variant="contained"
 
         >   <Link to={`/`} style={{ textDecoration: 'none', color: "white" }} >
             IR AL LISTADO DE PRODUCTOS</Link>

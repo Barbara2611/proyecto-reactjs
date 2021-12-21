@@ -72,6 +72,14 @@ export const CartProvider = ({children}) => {
 
         return count;
     };
+    const itemSumatory = ()=>{
+        let newcard = 0;
+        cart.map(item =>{
+            newcard = newcard + item.quantity;
+    
+        }  )
+        return newcard;
+    }
 
 
 
@@ -79,7 +87,7 @@ export const CartProvider = ({children}) => {
   
     return (
         <cartContext.Provider
-            value={{ cart, setCart, isInCart, addItemCart, removeItemCart, clearCart, countItemsCart, getItemQuantity, getTotalPrice }}
+            value={{ cart, setCart, isInCart, addItemCart, removeItemCart, clearCart, countItemsCart, getItemQuantity, getTotalPrice, itemSumatory}}
         >
             {children}
         </cartContext.Provider>

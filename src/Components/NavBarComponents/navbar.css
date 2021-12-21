@@ -2,7 +2,7 @@
     margin-right: 20px ;
   }
 .appbar {
-   background-color: rebeccapurple ;
+   background-color: #F5B7B1 ;
    align-content: center ;
 }
 
@@ -15,6 +15,6 @@ flex-grow: 3 ;
 .bar {
   text-decoration: none ;
   list-style: none ;
-  color: white ;
+  color: #EC7063 ;
 
 }

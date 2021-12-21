@@ -20,7 +20,7 @@ const ItemDetailContainer = () => {
 
     })
   }, [])
-
+  console.log(`item detail`, item)
 
   return ( 
 
