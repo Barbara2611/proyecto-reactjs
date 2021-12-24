@@ -126,7 +126,7 @@ export default function Cart() {
                       component="h3"
                       color="inherit"
                       sx={{ width: 250, textAlign: "center", fontSize: 18 }}
-                    > USD{value.item.price}
+                    > {`$`}{value.item.price}
 
                     </Typography>
                     <IconButton color="inherit" onClick={() => removeItemCart(value.item.id)} >
